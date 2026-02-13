@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top left, #1f2937 0%, #0f172a 45%, #020617 100%);
+  color: #e2e8f0;
+}
+
+.shell-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand-card,
+.status-card,
+.content-header,
+.page-panel,
+.feature-card,
+.product-card {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.96));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.35);
+}
+
+.brand-card {
+  padding: 18px;
+}
+
+.brand-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #86efac;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
+
+.brand-card h1 {
+  margin: 0;
+  margin-top: 12px;
+  font-size: 1.42rem;
+}
+
+.brand-card p,
+.muted {
+  color: #94a3b8;
+}
+
+.small-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.65px;
+  font-size: 0.95rem;
+}
+
+.status-card {
+  padding: 16px;
+}
+
+.status-card h3 {
+  margin: 8px 0;
+  color: #f8fafc;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.content-header {
+  padding: 14px;
+}
+
+.pill-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-pill {
+  text-decoration: none;
+  color: #cbd5e1;
+  background: rgba(71, 85, 105, 0.45);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: 180ms ease;
+}
+
+.nav-pill:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #e0f2fe;
+  background: rgba(8, 47, 73, 0.45);
+}
+
+.active-pill {
+  color: #fecaca;
+  border-color: rgba(251, 113, 133, 0.6);
+  background: rgba(127, 29, 29, 0.38);
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  margin-top: 12px;
+  font-size: 0.86rem;
+  color: #94a3b8;
+}
+
+.breadcrumbs a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.crumb-sep {
+  color: #64748b;
+}
+
+.page-panel {
+  padding: 24px;
+}
+
+.page-block h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.page-block p {
+  line-height: 1.6;
+}
+
+button {
+  border: 1px solid rgba(251, 113, 133, 0.65);
+  background: linear-gradient(135deg, #b91c1c, #be123c);
+  color: white;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 160ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 18px rgba(190, 24, 93, 0.32);
+}
+
+.logout-btn {
+  border-radius: 10px;
+}
+
+.feature-grid,
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.feature-card,
+.product-card {
+  padding: 16px;
+}
+
+.feature-card h3,
+.product-card h3 {
+  margin: 0 0 8px;
+  color: #f8fafc;
+}
+
+.product-card p {
+  margin: 0 0 8px;
+  color: #94a3b8;
+}
+
+.product-card a,
+.page-block > a {
+  color: #fda4af;
+  text-decoration: none;
+}
+
+.product-card a:hover,
+.page-block > a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .shell-grid {
+    padding: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  .page-panel {
+    padding: 18px;
+  }
+}
